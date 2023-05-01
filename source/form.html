@@ -2,14 +2,17 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo logo" href="#">
-        <img class="logo__image-mobile" src="img/logo-mobile.svg" alt="Летящий супер кот в плаще">
-        <img class="logo__text-mobile" src="img/logo2.svg" alt="Cat Energy">
+      <a class="main-header__logo" href="#">
+        <span class="visually-hidden">логотип</span>
+      </a>
+      <a class="main-header__text-logo" href="#">
+        <span class="visually-hidden">Cat energy</span>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -36,57 +39,61 @@
           <p class="pet-info__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="pet-info__form form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="form__wrappper">
-              <fieldset class="form__fieldset fieldset">
-                <legend class="visually-hidden">Введите данные вашего кота.</legend>
-                <div class="fieldset__wrappper">
-                  <label class="fieldset__label" for="cat-name">Имя:*</label>
-                  <input class="fieldset__input" id="cat-name" type="text" name="cat-name" placeholder="БАРСИК">
-                </div>
-                <div class="fieldset__wrappper">
-                  <label class="fieldset__label" for="cat-weight">Вес (кг):*</label>
-                  <input class="fieldset__input" id="cat-weight" type="text" name="cat-weidht" placeholder="7">
-                </div>
-                <div class="fieldset__wrappper">
-                  <label class="fieldset__label" for="cat-age">Возраст (лет):*</label>
-                  <input class="fieldset__input" id="cat-age" type="text" name="cat-age" placeholder="7">
-                </div>
-              </fieldset>
+              <div class="form__cat-program">
+                <fieldset class="form__fieldset fieldset">
+                  <legend class="visually-hidden">Введите данные вашего кота.</legend>
+                  <div class="fieldset__wrappper">
+                    <label class="fieldset__label" for="cat-name">Имя:*</label>
+                    <input class="fieldset__input" id="cat-name" type="text" name="cat-name" placeholder="БАРСИК">
+                  </div>
+                  <div class="fieldset__wrappper">
+                    <label class="fieldset__label" for="cat-weight">Вес (кг):*</label>
+                    <input class="fieldset__input" id="cat-weight" type="text" name="cat-weidht" placeholder="7">
+                  </div>
+                  <div class="fieldset__wrappper">
+                    <label class="fieldset__label" for="cat-age">Возраст (лет):*</label>
+                    <input class="fieldset__input" id="cat-age" type="text" name="cat-age" placeholder="7">
+                  </div>
+                </fieldset>
 
-              <fieldset class="form__fieldset fieldset">
-                <legend class="visually-hidden">Выберите программу питания для кота.</legend>
-                <ul class="fieldset__list">
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
-                      <input class="control__input" type="radio" name="programs-group" value="weight-loss" checked>
-                      <span class="control__label">Похудение</span>
-                    </label>
-                  </li>
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
-                      <input class="control__input" type="radio" name="programs-group" value="weight-gain">
-                      <span class="control__label">Набор массы</span>
-                    </label>
-                  </li>
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
-                      <input class="control__input" type="radio" name="programs-group" value="advice">
-                      <span class="control__label">Не знаю (Нужен ваш совет)</span>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+                <fieldset class="form__fieldset fieldset">
+                  <legend class="visually-hidden">Выберите программу питания для кота.</legend>
+                  <ul class="fieldset__list">
+                    <li class="fieldset__item">
+                      <label class="fieldset__label control">
+                        <input class="control__input" type="radio" name="programs-group" value="weight-loss" checked>
+                        <span class="control__label">Похудение</span>
+                      </label>
+                    </li>
+                    <li class="fieldset__item">
+                      <label class="fieldset__label control">
+                        <input class="control__input" type="radio" name="programs-group" value="weight-gain">
+                        <span class="control__label">Набор массы</span>
+                      </label>
+                    </li>
+                    <li class="fieldset__item">
+                      <label class="fieldset__label control">
+                        <input class="control__input" type="radio" name="programs-group" value="advice">
+                        <span class="control__label">Не знаю (Нужен ваш совет)</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
 
-              <fieldset class="form__fieldset fieldset">
-                <legend class="fieldset__legend">Контактные данные (владельца кота)</legend>
-                <div class="fieldset__wrappper">
-                  <label class="fieldset__label" for="cat-email">e-mail:*</label>
-                  <input class="fieldset__input" id="cat-email" type="text" name="cat-email" placeholder="kuklachev@gmail.com">
+              <fieldset class="form__fieldset person-contact">
+                <legend class="person-contact__legend">Контактные данные (владельца кота)</legend>
+                <div class="person-contact__list">
+                  <div class="person-contact__wrappper">
+                    <label class="person-contact__label" for="cat-email">e-mail:*</label>
+                    <input class="person-contact__input" id="cat-email" type="text" name="cat-email" placeholder="kuklachev@gmail.com">
+                  </div>
+                  <div class="person-contact__wrappper">
+                    <label class="person-contact__label" for="cat-phone">Телефон:*</label>
+                    <input class="person-contact__input" id="cat-phone" type="text" name="cat-phone" placeholder="8 (960) 900-60-90">
+                  </div>
                 </div>
-                <div class="fieldset__wrappper">
-                  <label class="fieldset__label" for="cat-phone">Телефон:*</label>
-                  <input class="fieldset__input" id="cat-phone" type="text" name="cat-phone" placeholder="8 (960) 900-60-90">
-                </div>
-              </fieldset>
+              </person-contact>
 
               <fieldset class="form__fieldset fieldset">
                 <legend class="fieldset__legend">Комментарий</legend>
@@ -95,29 +102,29 @@
                 </div>
               </fieldset>
 
-              <fieldset class="form__fieldset fieldset">
-                <legend class="fieldset__legend">Дополнительно</legend>
-                <ul class="fieldset__list">
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
+              <fieldset class="form__fieldset additionally">
+                <legend class="additionally__legend">Дополнительно</legend>
+                <ul class="additionally__list">
+                  <li class="additionally__item">
+                    <label class="additionally__label control">
                       <input class="control__input" type="checkbox" name="sweetener" checked>
                       <span class="control__label">сахарозаменитель</span>
                     </label>
                   </li>
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
+                  <li class="additionally__item">
+                    <label class="additionally__label control">
                       <input class="control__input" type="checkbox" name="drinking water">
                       <span class="control__label">питьевая вода</span>
                     </label>
                   </li>
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
+                  <li class="additionally__item">
+                    <label class="additionally__label control">
                       <input class="control__input" type="checkbox" name="milk">
                       <span class="control__label">молоко</span>
                     </label>
                   </li>
-                  <li class="fieldset__item">
-                    <label class="fieldset__label control">
+                  <li class="additionally__item">
+                    <label class="additionally__label control">
                       <input class="control__input" type="checkbox" name="vitamins">
                       <span class="control__label">витамины</span>
                     </label>

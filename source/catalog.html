@@ -2,14 +2,17 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo logo" href="#">
-        <img class="logo__image-mobile" src="img/logo-mobile.svg" alt="Летящий супер кот в плаще">
-        <img class="logo__text-mobile" src="img/logo2.svg" alt="Cat Energy">
+      <a class="main-header__logo" href="#">
+        <span class="visually-hidden">логотип</span>
+      </a>
+      <a class="main-header__text-logo" href="#">
+        <span class="visually-hidden">Cat energy</span>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -200,39 +203,58 @@
         <h2 class="extended-catalog__header">Дополнительные товары</h2>
         <ul class="extended-catalog__list">
           <li class="extended-catalog__item">
-            <h3 class="extended-catalog__name">Сахарозаменитель</h3>
-            <div class="extended-catalog__characteristic">1 упаковка (100 г)</div>
-            <div class="extended-catalog__value">200 ₽</div>
+            <div class="extended-catalog__product">
+              <h3 class="extended-catalog__name">Сахарозаменитель</h3>
+              <div class="extended-catalog__price-wrapper">
+                <div class="extended-catalog__characteristic">1 упаковка (100 г)</div>
+                <div class="extended-catalog__value">200 ₽</div>
+              </div>
+            </div>
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="extended-catalog__item">
-            <h3 class="extended-catalog__name">питьевая вода</h3>
-            <div class="extended-catalog__characteristic">5 литров</div>
-            <div class="extended-catalog__value">50 ₽</div>
-          <a class="button" href="#">Заказать</a>
-          </li>
-          <li class="extended-catalog__item">
-            <h3 class="extended-catalog__name">молоко</h3>
-            <div class="extended-catalog__characteristic">1 литр</div>
-            <div class="extended-catalog__value">100 ₽</div>
+            <div class="extended-catalog__product">
+              <h3 class="extended-catalog__name">питьевая вода</h3>
+              <div class="extended-catalog__price-wrapper">
+                <div class="extended-catalog__characteristic">5 литров</div>
+                <div class="extended-catalog__value">50 ₽</div>
+              </div>
+            </div>
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="extended-catalog__item">
-            <h3 class="extended-catalog__name">витамины</h3>
-            <div class="extended-catalog__characteristic">1 упаковка (30 г)</div>
-            <div class="extended-catalog__value">300 ₽</div>
+            <div class="extended-catalog__product">
+              <h3 class="extended-catalog__name">молоко</h3>
+              <div class="extended-catalog__price-wrapper">
+                <div class="extended-catalog__characteristic">1 литр</div>
+                <div class="extended-catalog__value">100 ₽</div>
+              </div>
+            </div>
+            <a class="button" href="#">Заказать</a>
+          </li>
+          <li class="extended-catalog__item">
+            <div class="extended-catalog__product">
+              <h3 class="extended-catalog__name">витамины</h3>
+              <div class="extended-catalog__price-wrapper">
+                <div class="extended-catalog__characteristic">1 упаковка (30 г)</div>
+                <div class="extended-catalog__value">300 ₽</div>
+              </div>
+            </div>
             <a class="button" href="#">Заказать</a>
           </li>
         </ul>
       </div>
-    </section>
 
-    <section class="promotion">
-      <div class="promotion__wrapper">
-      <h2 class="visually-hidden">Акция</h2>
-      <b class="promotion__content">Закажите все и получите чехол для кота в подарок!</b>
+      <div class="extended-catalog__promotion--wrapper">
+        <div class="extended-catalog__promotion--background">
+          <b class="extended-catalog__promotion--content">Закажите все и получите чехол для кота в подарок!</b>
+        </div>
       </div>
     </section>
+
+
+
+
 
     <section class="contacts">
       <div class="contacts__wrapper">

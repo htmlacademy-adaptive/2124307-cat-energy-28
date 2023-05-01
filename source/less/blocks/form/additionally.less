@@ -1,0 +1,31 @@
+
+.additionally {
+  padding: 20px;
+}
+
+.additionally__legend {
+  .form_headlines ();
+}
+
+.additionally__input {
+  .form_field_text ();
+}
+
+
+.additionally__label {
+  .form_field_text ();
+}
+
+.additionally__list {
+  .reset_list_style ();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 221px 221px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 221px 189px 128px 150px;
+  }
+}

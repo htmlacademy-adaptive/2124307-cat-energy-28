@@ -12,4 +12,13 @@
 
 .instruction__list {
   .reset_list_style ();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 230px 230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 230px 246px 248px 250px;
+  }
 }

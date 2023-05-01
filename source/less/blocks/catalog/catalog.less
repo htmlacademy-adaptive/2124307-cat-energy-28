@@ -8,6 +8,16 @@
 .catalog__list {
   .reset_list_style ();
   margin-top: 47px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+  }
 }
 
 .catalog__item {

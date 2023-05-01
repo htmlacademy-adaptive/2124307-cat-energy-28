@@ -18,11 +18,20 @@
 
 .programs__list {
   .reset_list_style();
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
   background-color: @base_grey;
   margin: 20px 0;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .programs__link {
