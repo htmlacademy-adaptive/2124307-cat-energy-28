@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header container">
       <a class="main-header__logo" href="#">
         <span class="visually-hidden">логотип</span>
       </a>
@@ -36,10 +36,12 @@
       <h1 class="visually-hidden">Cat energy-Функцианальное  питание для котов</h1>
       <section class="main-product">
         <div class="main-product__wrapper">
-          <h2 class="main-product__header">Фунцианальное <br> питание для котов</h2>
-          <p class="main-product__slogan">Занялся собой? Займись котом!</p>
-          <img class="main-product__flagship" src="img/cat-energy.png" alt="Банка кошачьего питания с курицей">
-          <a class="button button--small">Подобрать программу</a>
+          <div class="main-product__content container">
+            <h2 class="main-product__header">Фунцианальное <br> питание для котов</h2>
+            <p class="main-product__slogan">Занялся собой? Займись котом!</p>
+            <img class="main-product__flagship" src="img/cat-energy.png" alt="Банка кошачьего питания с курицей">
+            <a class="button button--small">Подобрать программу</a>
+          </div>
         </div>
       </section>
 
@@ -84,27 +86,31 @@
 
       <section class="example">
         <div class="example__wrapper container">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__result">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__number">5 КГ</dt>
-              <dd class="example__descreption">снижение веса</dd>
-            </div>
-            <div class="example__item">
-              <dt class="example__number">60 ДНЕЙ</dt>
-              <dd class="example__descreption">затрачено времени</dd>
-            </div>
-          </dl>
-          <div class="example__expenses">Затраты на питание: 15 000 РУБ.</div>
-          <img class="example__thick" src="img/cat-thick.png" alt="толстый кот">
-          <img class="example__thin" src="img/cat-thin.png" alt="худой кот">
-          <button class="button" type="button"></button>
+          <div class="example__text-wrapper">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__result">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <dl class="example__list">
+              <div class="example__item">
+                <dt class="example__number">5 КГ</dt>
+                <dd class="example__descreption">снижение веса</dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__number">60 ДНЕЙ</dt>
+                <dd class="example__descreption">затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="example__expenses">Затраты на питание: 15 000 РУБ.</div>
+          </div>
+          <div class="example__slider">
+            <img class="example__thick" src="img/cat-thick.png" alt="толстый кот">
+            <img class="example__thin" src="img/cat-thin.png" alt="худой кот">
+            <button class="button" type="button"></button>
+          </div>
         </div>
       </section>
 
       <section class="contacts contacts--index">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper container">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contacts__call">приглашаем к сотрудничеству дилеров!</div>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -114,31 +120,33 @@
     </main>
 
     <footer class="main-footer">
-      <a class="main-footer__logo logo" href="#">
-        <img class="logo__text-mobile" src="img/logo2.svg" alt="Cat Energy">
-      </a>
-      <div class="main-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-footer__copyright copyright">
-        <b class="copyright__text"> HTML Academy</b>
-        <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      <div class="main-footer__wrapper container">
+        <a class="main-footer__logo logo" href="#">
+          <img class="logo__text-mobile" src="img/logo2.svg" alt="Cat Energy">
+        </a>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://htmlacademy.ru/intensive/adaptive">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text"> HTML Academy</b>
+          <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
       </div>
     </footer>
   </body>
