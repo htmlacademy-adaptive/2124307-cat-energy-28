@@ -1,5 +1,6 @@
 .catalog__heder {
   .page_header_font();
+  .reset_header_style ();
   margin-top: 27px;
   margin-left: 20px;
 }
@@ -7,6 +8,16 @@
 .catalog__list {
   .reset_list_style ();
   margin-top: 47px;
+
+  @media (min-width: @tablet_width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+  }
+
+  @media (min-width: @desktop_width) {
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+  }
 }
 
 .catalog__item {
