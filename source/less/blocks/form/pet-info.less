@@ -1,7 +1,27 @@
+.pet-info {
+  @media (min-width: @tablet_width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-bottom: 82px;
+  }
+}
+
 .pet-info__header {
   .page_header_font();
   .reset_header_style ();
-  margin-top: 27px;
+  // margin-top: 27px;
+
+  @media (min-width: @tablet_width) {
+    font-size: 60px;
+    line-height: 60px;
+    // margin-top: 75px;
+  }
+
+  @media (min-width: @desktop_width) {
+    // margin-top: 77px;
+  }
 }
 
 .pet-info__text {
@@ -9,6 +29,12 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-top: 37px;
-  margin-bottom: 37px;
+  margin: 37px 0;
+
+  @media (min-width: @tablet_width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 54px;
+    margin-bottom: 66px;
+  }
 }

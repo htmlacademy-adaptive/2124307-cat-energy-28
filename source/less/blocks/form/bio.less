@@ -1,0 +1,43 @@
+.bio {
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 570px;
+    margin-bottom: 0;
+  }
+}
+
+.bio__wrapper {
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: @tablet_width) {
+    width: 630px;
+
+    &--form {
+      width: 630px;
+    }
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.bio__legend {
+  .form_headlines ();
+  padding-bottom: 24px;
+}
+
+.bio__item:not(:last-child) {
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 20px;
+  }
+}
