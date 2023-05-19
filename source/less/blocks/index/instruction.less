@@ -1,13 +1,19 @@
 .instruction {
   margin: 0 20px 49px 20px;
-}
 
-.instruction__description {
-  .description_font ();
+  @media (min-width: @tablet_width) {
+    margin-bottom: 47px;
+  }
 }
 
 .instruction__header {
   .work_example ();
+
+  @media (min-width: @tablet_width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 45px 0 36px 0;
+  }
 }
 
 .instruction__list {
@@ -15,10 +21,91 @@
 
   @media (min-width: @tablet_width) {
     display: grid;
-    grid-template-columns: 230px 230px;
+    grid-template-columns: 240px 240px;
+    gap: 0 154px;
   }
 
   @media (min-width: @desktop_width) {
     grid-template-columns: 230px 246px 248px 250px;
+    gap: 0 87px;
+  }
+}
+
+.instruction__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: column;
+    height: 183px;
+    padding: 40px 0 57px 0;
+  }
+}
+
+.instruction__item:not(:first-child) {
+  margin-top: 20px;
+
+  @media (min-width: @tablet_width) {
+    margin: 0;
+  }
+}
+
+.instruction__description {
+  .description_font ();
+  width: 196px;
+  margin: 0;
+
+  @media (min-width: @tablet_width) {
+    width: 245px;
+  }
+}
+
+.instruction__icon {
+  width: 60px;
+  height: 60px;
+
+  background-color: @base_green;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet_width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.instruction__item--natural {
+  background-image: url("../../img/icon_leaf.svg");
+  background-size: 30px 32px;
+}
+
+.instruction__item--cooking {
+  background-image: url("../../img/icon_cooking.svg");
+  background-size: 26px 29px;
+}
+
+.instruction__item--diet {
+  background-image: url("../../img/icon_eat.svg");
+  background-size: 25px 30px;
+}
+
+.instruction__item--result {
+  background-image: url("../../img/icon_clock.svg");
+  background-size: 26px 31px;
+}
+
+.instruction__order {
+  display: none;
+
+  @media (min-width: @tablet_width) {
+    position: absolute;
+    display: block;
+    font-size: 280px;
+    line-height: 280px;
+    color: @base_grey;
+    z-index: -1;
+    top: 0;
+    right: 0;
   }
 }
