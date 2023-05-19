@@ -1,39 +1,240 @@
-.programs {
-  padding: 0 20px;
-}
-
-.programs__description {
-  .description_font();
-}
-
-.programs__name {
-  .weight_change ();
-  .reset_header_style ();
-}
-
-.programs__header {
-  .weight_change ();
-  .reset_header_style ();
-}
-
 .programs__list {
   .reset_list_style();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet_width) {
+    margin-top: 0;
+    gap: 30px;
+  }
 
   @media (min-width: @desktop_width) {
+    margin-top: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    gap: 80px;
   }
 }
 
 .programs__item {
   background-color: @base_grey;
-  margin: 20px 0;
+  padding: 20px;
+  position: relative;
+
+  @media (min-width: @tablet_width) {
+    padding: 77px 316px 53px 52px;
+  }
 
   @media (min-width: @desktop_width) {
     width: 570px;
+    padding: 77px 61px 59px 52px;
+  }
+}
+
+.programs__header {
+  .weight_change ();
+  .reset_header_style ();
+
+  margin: 10px 0 0 71px;
+
+  @media (min-width: @tablet_width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 162px;
+  }
+}
+
+.programs__img-slim-wrapper {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  width: 50px;
+  height: 53px;
+
+  @media (min-width: @tablet_width) {
+    top: 81px;
+    left: 446px;
+    width: 200px;
+    height: 211px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: 41px;
+    left: 52px;
+    width: 100px;
+    height: 106px;
+  }
+}
+
+.programs__img-slim {
+  content: "";
+  position: absolute;
+  left: 7px;
+  width: 36px;
+  height: 50px;
+
+  background-image: url("../../img/cat-slim.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (min-width: @tablet_width) {
+    left: 30px;
+    width: 140px;
+    height: 194px;
+  }
+
+  @media (min-width: @desktop_width) {
+    left: 15px;
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.programs__img-circle-slim {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: @base_green;
+  margin-top: 3px;
+
+  @media (min-width: @tablet_width) {
+    width: 200px;
+    height: 200px;
+    margin-top: 11px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 100px;
+    height: 100px;
+    margin-top: 6px;
+  }
+}
+
+.programs__img-pro-wrapper {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 13px;
+  width: 67px;
+  height: 50px;
+
+  @media (min-width: @tablet_width) {
+    top: 91px;
+    left: 412px;
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: 47px;
+    left: 33px;
+    width: 134px;
+    height: 100px;
+  }
+}
+
+.programs__img-pro {
+  content: "";
+  position: absolute;
+  top: 11px;
+  width: 67px;
+  height: 28px;
+
+  background-image: url("../../img/cat-pro.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (min-width: @tablet_width) {
+    top: 44px;
+    width: 268px;
+    height: 112px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: 20px;
+    width: 134px;
+    height: 56px;
+  }
+}
+
+.programs__img-circle-pro {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: @base_green;
+  margin: auto;
+
+  @media (min-width: @tablet_width) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.programs__description {
+  .description_font();
+  color: @special_dark_grey;
+  margin-top: 29px;
+  margin-bottom: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet_width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 24px;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 74px;
   }
 }
 
 .programs__link {
   .link_catalog ();
+  display: inline-block;
+  text-transform: uppercase;
+  width: 139px;
+  margin-top: 15px;
+  padding: 4px 0 4px 0;
+
+  background-image: url("../../img/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 105px 8px;
+
+  @media (min-width: @tablet_width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    width: 161px;
+    margin-top: 48px;
+
+    background-position: 129px 15px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 168px;
+    margin-top: 23px;
+
+    background-position: 133px 15px;
+  }
+}
+
+.programs__link-text {
+  display: inline-block;
 }
