@@ -18,11 +18,12 @@
 
 .instruction__list {
   .reset_list_style ();
+  counter-reset: item;
 
   @media (min-width: @tablet_width) {
     display: grid;
     grid-template-columns: 240px 240px;
-    gap: 0 154px;
+    gap: 34px 154px;
   }
 
   @media (min-width: @desktop_width) {
@@ -38,8 +39,8 @@
 
   @media (min-width: @tablet_width) {
     flex-direction: column;
-    height: 183px;
-    padding: 40px 0 57px 0;
+    height: 223px;
+    padding-bottom: 57px;
   }
 }
 
@@ -52,18 +53,24 @@
 }
 
 .instruction__description {
+  position: relative;
   .description_font ();
   width: 196px;
-  margin: 0;
+  margin: 0 0 0 80px;
 
   @media (min-width: @tablet_width) {
     width: 245px;
+    margin: 151px 0 0 0;
   }
 }
 
-.instruction__icon {
+.instruction__description::before {
+  position: absolute;
+  content: "";
+  display: block;
   width: 60px;
   height: 60px;
+  left: -80px;
 
   background-color: @base_green;
   background-repeat: no-repeat;
@@ -72,40 +79,63 @@
   @media (min-width: @tablet_width) {
     width: 80px;
     height: 80px;
+    left: 0;
+    top: -111px;
   }
 }
 
-.instruction__item--natural {
+.instruction__item--natural .instruction__description::before {
   background-image: url("../../img/icon_leaf.svg");
   background-size: 30px 32px;
 }
 
-.instruction__item--cooking {
+.instruction__item--cooking .instruction__description::before {
   background-image: url("../../img/icon_cooking.svg");
   background-size: 26px 29px;
 }
 
-.instruction__item--diet {
+.instruction__item--diet .instruction__description::before {
   background-image: url("../../img/icon_eat.svg");
   background-size: 25px 30px;
 }
 
-.instruction__item--result {
+.instruction__item--result .instruction__description::before {
   background-image: url("../../img/icon_clock.svg");
   background-size: 26px 31px;
 }
 
-.instruction__order {
+.instruction__description::after {
   display: none;
 
   @media (min-width: @tablet_width) {
+    counter-increment: item;
+    content: counter(item);
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+
     position: absolute;
     display: block;
     font-size: 280px;
     line-height: 280px;
     color: @base_grey;
     z-index: -1;
-    top: 0;
+    top: -151px;
     right: 0;
   }
 }
+
+
+// .instruction__order {
+//   display: none;
+
+//   @media (min-width: @tablet_width) {
+//     position: absolute;
+//     display: block;
+//     font-size: 280px;
+//     line-height: 280px;
+//     color: @base_grey;
+//     z-index: -1;
+//     top: 0;
+//     right: 0;
+//   }
+// }
