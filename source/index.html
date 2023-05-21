@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header container">
@@ -40,7 +44,11 @@
         <div class="main-product__wrapper container">
           <h2 class="main-product__header">Фунцианальное <br> питание для котов</h2>
           <p class="main-product__slogan">Занялся собой? Займись котом!</p>
-          <img class="main-product__flagship" src="img/cat-energy.png" alt="Банка кошачьего питания с курицей">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 769px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+            <img class="main-product__flagship" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка кошачьего питания с курицей">
+          </picture>
           <a class="main-product__button-wrapper button button--small">Подобрать программу</a>
         </div>
       </section>
@@ -119,8 +127,14 @@
             </div>
           </div>
           <div class="example__slider">
-            <img class="example__thick" src="img/cat-thick.png" alt="толстый кот">
-            <img class="example__thin" src="img/cat-thin.png" alt="худой кот">
+            <picture>
+              <source media="(min-width: 769px)" srcset="img/cat-thick-tablet.png 1x, img/cat-thick-tablet@2x.png 2x">
+              <img class="example__thick" src="img/cat-thick-mobile.png" srcset="img/cat-thick-mobile@2x.png 2x" width="280" height="256" alt="толстый кот">
+            </picture>
+            <picture>
+              <source media="(min-width: 769px)" srcset="img/cat-thin-tablet.png 1x, img/cat-thin-tablet@2x.png 2x">
+              <img class="example__thin" src="img/cat-thin-mobile.png" srcset="img/cat-thin-mobile@2x.png 2x" width="280" height="256" alt="худой кот с глазами полными печали и мечтой о сосиске">
+            </picture>
             <button class="button" type="button"></button>
           </div>
         </div>
