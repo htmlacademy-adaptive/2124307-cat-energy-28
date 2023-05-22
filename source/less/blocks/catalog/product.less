@@ -1,24 +1,21 @@
+.product {
+  @media (min-width: @tablet_width) {
+    background: linear-gradient(#ffffff 15.85%, @base_grey 15.85%);
+  }
+}
+
 .product__container {
   width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet_width) {
-    background: #f2f2f2;
     width: 250px;
-    padding: 161px 38px 39px 36px;
+    padding: 0 38px 39px 36px;
   }
 
   @media (min-width: @desktop_width) {
     width: 180px;
-    padding: 162px 35px 39px 30px;
-  }
-}
-
-.product__container:last-child {
-  padding-top: 78px;
-
-  @media (min-width: @tablet_width) {
-    padding-top: 161px;
+    padding: 0 35px 39px 30px;
   }
 }
 
@@ -29,19 +26,31 @@
 
   @media (min-width: @tablet_width) {
     display: block;
-    position: relative;
     margin-bottom: 33px;
   }
 }
 
 .product__image {
+  margin-top: 14px;
   margin-left: 36px;
 
+  &--big {
+    margin-top: 11px;
+    margin-left: 28px;
+  }
+
   @media (min-width: @tablet_width) {
-    position: absolute;
-    margin: 0;
-    left: 82px;
-    top: -109px;
+    display: block;
+    margin: 0 auto 34px auto;
+    padding-top: 36px;
+    width: 161px;
+    height: 172px;
+
+    &--big {
+      width: 168px;
+      height: 206px;
+      padding-top: 8px;
+    }
   }
 
   @media (min-width: @desktop_width) {
@@ -69,7 +78,7 @@
   width: 76px;
 
   @media (min-width: @tablet_width) {
-    width: 154px;
+    width: 147px;
     margin: 0 auto;
     font-size: 20px;
     line-height: 24px;
@@ -118,36 +127,5 @@
   @media (min-width: @tablet_width) {
     font-size: 16px;
     line-height: 16px;
-  }
-}
-
-.product__more {
-  .reset_header_style ();
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-align: center;
-
-  @media (min-width: @tablet_width) {
-    font-size: 20px;
-    line-height: 24px;
-    width: 154px;
-    margin: 0 auto;
-  }
-}
-
-.product__explane {
-  font-family: "Lato", "Arial", sans-serif;
-  color: @special_dark_grey;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  margin: 8px 0 21px 0;
-
-  @media (min-width: @tablet_width) {
-    font-size: 16px;
-    line-height: 18px;
-    width: 174px;
-    margin: 23px auto 87px auto;
   }
 }
