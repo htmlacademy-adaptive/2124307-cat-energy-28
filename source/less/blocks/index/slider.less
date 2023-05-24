@@ -1,0 +1,27 @@
+.slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: @tablet_width) {
+    margin: 0 auto;
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 0 0 0 auto;
+  }
+}
+
+.slider__item {
+  position: absolute;
+  overflow: hidden;
+}
+
+.slider__img {
+  @media (min-width: @tablet_width) {
+    width: 560px;
+    height: 512px;
+  }
+}
