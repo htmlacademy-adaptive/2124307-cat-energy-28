@@ -59,6 +59,18 @@ const copyImages = () => {
 
 // SVG
 
+export const svg = () => {
+  return gulp.src([
+    'source/img/favicons/*.svg',
+    'source/img/logo/*.svg',
+    'source/img/*.svg',
+  ], {
+    base: 'source/img'
+  })
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+}
+
 const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
     .pipe(svgo())
@@ -74,9 +86,6 @@ const sprite = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/**/*.{woff2,woff}',
-    'source/img/favicons/*.svg',
-    'source/img/logo/*.svg',
-    'source/img/*.svg',
     'source/manifest.webmanifest',
   ], {
     base: 'source'
@@ -120,12 +129,21 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  svg,
   gulp.parallel(
     html,
     styles,
     scripts,
     sprite,
   )
+);
+
+// Start
+
+export const start = gulp.series(
+  build,
+  server,
+  watcher
 );
 
 export default gulp.series(
