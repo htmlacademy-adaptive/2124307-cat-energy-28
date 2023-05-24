@@ -54,14 +54,17 @@
 
 .example__list-wrapper {
   margin-top: 20px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet_width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 99px;
   }
 
   @media (min-width: @desktop_width) {
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
