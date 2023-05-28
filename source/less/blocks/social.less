@@ -3,12 +3,31 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 132px;
+  width: 135px;
 }
 
 .social__link {
   display: block;
   width: 28px;
-  height: 22px;
+  height: 18px;
   color: #666666;
+}
+
+.social__link:hover {
+  color: @base_green;
+}
+
+.social__link:active {
+  opacity: 0.3;
+  color: @base_green;
+}
+
+.social__item {
+  margin-top: 3px;
+  margin-left: 2px;
+
+  @media (min-width: @tablet_width) {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }

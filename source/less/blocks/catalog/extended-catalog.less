@@ -1,15 +1,27 @@
 .extended-catalog {
   position: relative;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-bottom: 17px;
+  }
 }
 
 .extended-catalog::before {
   content: "";
   position: absolute;
   width: 100vw;
-  border: 2px solid @base_green;
-  top: 12px;
+  border: 1px solid @base_green;
+  top: 16px;
   z-index: -1;
+
+  @media (min-width: @tablet_width) {
+    top: 22px;
+  }
 }
 
 .extended-catalog__header {
@@ -20,13 +32,20 @@
   margin: 25px 0 36px 0;
   background-color: #ffffff;
   padding-left: 20px;
-  width: 264px;
+  width: 247px;
 
   @media (min-width: @tablet_width) {
     font-size: 36px;
     line-height: 36px;
-    width: 400px;
-    margin: 68px 0 80px 0;
+    width: 375px;
+    margin: 65px 0 80px 0;
+    padding-left: 38px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 75px;
+    margin-left: 70px;
+    padding-left: 40px;
   }
 }
 
@@ -49,7 +68,7 @@
 
 .extended-catalog__item {
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-top: 1px solid #cdcdcd;
 
   @media (min-width: @tablet_width) {
@@ -64,7 +83,7 @@
     gap: 40px;
     border-left: none;
     border-right: none;
-    padding: 15px 0 17px 0;
+    padding: 15px 0 16px 0;
   }
 }
 
@@ -76,6 +95,7 @@
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
+  color: @special_dark_grey;
 
   @media (min-width: @tablet_width) {
     font-size: 16px;
@@ -83,7 +103,7 @@
   }
 
   @media (min-width: @desktop_width) {
-    margin: auto 0;
+    margin-top: 10px;
   }
 }
 
@@ -91,14 +111,21 @@
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
+  color: @special_dark_grey;
 
   @media (min-width: @tablet_width) {
     font-size: 16px;
     line-height: 20px;
+    width: 92px;
+    text-align: right;
+    margin-right: 3px;
   }
 
   @media (min-width: @desktop_width) {
     margin: auto 0;
+
+    text-align: left;
+    width: 41px;
   }
 }
 
@@ -109,10 +136,12 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 13px;
+  color: #222222;
 
   @media (min-width: @tablet_width) {
     font-size: 20px;
     line-height: 20px;
+    margin-left: 9px;
   }
 
   @media (min-width: @desktop_width) {
@@ -126,6 +155,7 @@
   @media (min-width: @tablet_width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 11px;
   }
 
   @media (min-width: @desktop_width) {
@@ -136,6 +166,11 @@
 .extended-catalog__price-wrapper {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet_width) {
+    margin-top: 2px;
+  }
+
 
   @media (min-width: @desktop_width) {
     width: 285px;
@@ -179,6 +214,7 @@
 }
 
 .extended-catalog__promotion-content {
+  position: relative;
   display: block;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
@@ -193,5 +229,35 @@
 
   @media (min-width: @desktop_width) {
     text-align: center;
+  }
+}
+
+.extended-catalog__promotion-content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon_gift.svg");
+  width: 78px;
+  height: 80px;
+  top: -127px;
+  left: 43px;
+
+  @media (min-width: @tablet_width) {
+    top: -12px;
+    left: -343px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: -128px;
+    left: 44px;
+  }
+}
+
+.extended-catalog__button {
+  @media (min-width: @tablet_width) {
+    margin-left: 9px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 0;
   }
 }

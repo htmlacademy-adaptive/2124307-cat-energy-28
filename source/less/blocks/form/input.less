@@ -1,25 +1,33 @@
 .input {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .input__label {
   .form_field_text ();
   color: @special_dark_grey;
-  margin: auto 0;
+  margin-top: 13px;
   padding-right: 13px;
   flex-shrink: 0;
 
   @media (min-width: @tablet_width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 10px;
+  }
+}
+
+.input__label--contacts {
+  @media (min-width: @tablet_width) {
+    padding-right: 21px;
   }
 }
 
 .input__field {
   .form_field_text ();
   border: 1px solid #e7e7e7;
-  padding: 14px 20px 13px 20px;
+  padding: 14px 20px 11px 20px;
   min-width: 100px;
   flex-grow: 1;
 
@@ -31,6 +39,40 @@
   }
 }
 
+.input__field:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.input__field:focus {
+  border: 1px solid @special_dark_grey;
+}
+
+.input__field:invalid {
+  border: 1px solid #ff8282;
+}
+
+.input__field--contacts {
+  padding-left: 12px;
+
+  @media (min-width: @tablet_width) {
+    padding-left: 20px;
+  }
+}
+
 .input__field::placeholder {
   color: @special_dark_grey;
+}
+
+.input__field-icon {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+}
+
+.input__field:focus + .input__field-icon {
+  color: @base_green;
+}
+
+.input__field:invalid + .input__field-icon {
+  color: #ff8282;
 }

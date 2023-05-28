@@ -1,13 +1,13 @@
 .comment {
-  margin-bottom: 40px;
+  margin-bottom: 19px;
   position: relative;
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 89px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop_width) {
-    margin-bottom: 67px;
+    margin-bottom: 61px;
   }
 }
 
@@ -15,9 +15,13 @@
   content: "";
   position: absolute;
   width: 100vw;
-  border: 2px solid @base_green;
-  top: 12px;
+  border: 1px solid @base_green;
+  top: 15px;
   z-index: -1;
+
+  @media (min-width: @tablet_width) {
+    top: 21px;
+  }
 }
 
 .comment__legend {
@@ -34,12 +38,16 @@
     line-height: 36px;
     width: 220px;
   }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 70px;
+  }
 }
 
 .comment__input {
   border: 1px solid #e7e7e7;
   width: 253px;
-  height: 150px;
+  height: 130px;
   padding: 9px 12px 9px 15px;
   resize: none;
 
@@ -59,5 +67,10 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: @special_dark_grey;
+
+  @media (min-width: @tablet_width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
