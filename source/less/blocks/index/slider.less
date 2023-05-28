@@ -44,11 +44,11 @@
   overflow: hidden;
 
   @media (min-width: @tablet_width) {
-    background: linear-gradient(#ffffff 29.49%, #f2f2f2 29.49%);
+    background: linear-gradient(#ffffff 29.49%, @base_grey 29.49%);
   }
 
-  @media (min-width: @tablet_width) {
-    background: linear-gradient(#ffffff 27.7%, #f2f2f2 27.7%);
+  @media (min-width: @desktop_width) {
+    background: linear-gradient(#ffffff 26.4%, #f2f2f2 26.4%);
   }
 }
 
@@ -83,12 +83,44 @@
   @media (min-width: @tablet_width) {
     left: 260px;
   }
+
+  @media (min-width: @desktop_width) {
+    left: 258px;
+  }
+}
+
+.slider__scroller:hover {
+  border: 3px solid @base_green;
+}
+
+.slider__scroller:hover::before,
+.slider__scroller:hover::after {
+  background: @base_green;
+}
+
+.slider__scroller:hover .slider__scroller-thumb {
+  color: @base_green;
+}
+
+.slider__scroller:active {
+  border: 3px solid @base_green;
+  opacity: 0.6;
+}
+
+.slider__scroller:active::before,
+.slider__scroller:active::after {
+  background: @base_green;
+}
+
+.slider__scroller:active .slider__scroller-thumb {
+  color: @base_green;
 }
 
 .slider__scroller-thumb {
   width: 100%;
   height: 100%;
   padding: 10px 0 0 8px;
+  color: #666666;
 }
 
 .slider__scroller::before,
