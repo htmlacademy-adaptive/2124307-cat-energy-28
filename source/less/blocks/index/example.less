@@ -4,13 +4,13 @@
 
   @media (min-width: @tablet_width) {
     padding: 47px 0 101px 0;
-    background: linear-gradient(#ffffff 60%, @base_grey 60%);
+    background: linear-gradient(#ffffff 57.25%, @base_grey 57.25%);
     border-top: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop_width) {
     padding: 20px 20px 75px 20px;
-    background: linear-gradient(#ffffff 30%, @base_grey 30%);
+    background: linear-gradient(#ffffff 26%, @base_grey 26%);
     border: none;
   }
 }
@@ -138,13 +138,15 @@
 }
 
 .example__price-wrapper {
-  margin-top: 34px;
-  text-align: center;
+  margin-top: 30px;
+  margin-left: 46px;
 
   @media (min-width: @tablet_width) {
     display: block;
     text-align: right;
     width: 182px;
+    margin-top: 9px;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop_width) {
@@ -154,6 +156,7 @@
     text-align: left;
   }
 }
+
 
 .example__expenses {
   font-size: 14px;
@@ -167,7 +170,8 @@
 }
 
 .example__price {
-  margin-left: 34px;
+  font-size: 14px;
+  line-height: 20px;
 
   @media (min-width: @tablet_width) {
     font-size: 20px;

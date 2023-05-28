@@ -1,5 +1,5 @@
 .instruction {
-  margin: 0 20px 49px 20px;
+  margin: 16px 0 49px 0;
 
   @media (min-width: @tablet_width) {
     margin-bottom: 47px;
@@ -8,11 +8,17 @@
 
 .instruction__header {
   .work_example ();
+  margin: 0;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet_width) {
     font-size: 60px;
     line-height: 60px;
     margin: 45px 0 32px 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 67px 0 32px;
   }
 }
 
@@ -23,7 +29,7 @@
   @media (min-width: @tablet_width) {
     display: grid;
     grid-template-columns: 240px 240px;
-    gap: 34px 154px;
+    gap: 35px 144px;
   }
 
   @media (min-width: @desktop_width) {
@@ -114,8 +120,11 @@
   .description_font ();
   width: 196px;
   margin: 0 0 0 80px;
+  padding: 3px 0;
 
   @media (min-width: @tablet_width) {
+    font-size: 16px;
+    line-height: 24px;
     width: 245px;
     margin: 151px 0 0 0;
   }

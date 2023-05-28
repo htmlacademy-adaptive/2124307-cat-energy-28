@@ -3,11 +3,11 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 536px;
+    margin-bottom: 528px;
   }
 
   @media (min-width: @desktop_width) {
-    margin-bottom: 349px;
+    margin-bottom: 268px;
   }
 }
 
@@ -15,7 +15,7 @@
   position: relative;
 
   @media (min-width: @tablet_width) {
-    padding-left: 118px;
+    // padding-left: 118px;
   }
 
   @media (min-width: @desktop_width) {
@@ -49,7 +49,7 @@
     width: 720px;
     height: 694px;
     top: -109px;
-    right: -110px;
+    right: -72px;
 
     background-color: @base_green;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/index-background-desktop.png");
@@ -70,10 +70,16 @@
 
   @media (min-width: @tablet_width) {
     padding-top: 62px;
+    padding-left: 82px;
     text-align: left;
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: @desktop_width) {
+    padding-top: 112px;
+    padding-left: 43px;
   }
 }
 
@@ -86,6 +92,7 @@
 
   @media (min-width: @tablet_width) {
     margin: 41px 0 49px 0;
+    padding-left: 88px;
     text-align: left;
 
     font-size: 20px;
@@ -94,19 +101,17 @@
 
   @media (min-width: @desktop_width) {
     margin: 40px 0 52px 0;
+    padding-left: 40px;
   }
 }
 
 .main-product__flagship {
-  margin-bottom: 3px;
-
   @media (min-width: @tablet_width) {
     position: absolute;
     width: 709px;
     height: 609px;
     margin: 0;
     z-index: -1;
-    left: 58px;
     top: 263px;
   }
 
@@ -114,13 +119,18 @@
     width: 552px;
     height: 499px;
 
-    top: 0;
-    left: 456px;
+    top: 30px;
+    left: 486px;
   }
 }
 
 .main-product__button-wrapper {
   @media (min-width: @tablet_width) {
     width: 244px;
+    margin-left: 91px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 40px;
   }
 }
