@@ -1,4 +1,19 @@
 .logo__text-mobile {
+  display: block;
+  margin: auto;
   width: 128px;
   height: 24px;
+
+  @media (min-width: @tablet_width) {
+    width: 142px;
+    height: 26px;
+  }
+}
+
+.logo__text-mobile:hover {
+  opacity: 0.8;
+}
+
+.logo__text-mobile:active {
+  opacity: 0.6;
 }

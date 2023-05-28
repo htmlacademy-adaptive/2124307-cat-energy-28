@@ -18,9 +18,13 @@
   content: "";
   position: absolute;
   width: 100vw;
-  border: 2px solid @base_green;
-  top: 12px;
+  border: 1px solid @base_green;
+  top: 15px;
   z-index: -1;
+
+  @media (min-width: @tablet_width) {
+    top: 21px;
+  }
 }
 
 .additionally__legend {
@@ -32,11 +36,15 @@
   padding-left: 20px;
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 69px;
+    margin-bottom: 56px;
     padding-left: 39px;
     font-size: 36px;
     line-height: 36px;
     width: 252px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 70px;
   }
 }
 
@@ -67,11 +75,15 @@
 
   @media (min-width: @desktop_width) {
     display: grid;
-    grid-template-columns: 221px 196px 128px 150px;
-    gap: 146px;
+    grid-template-columns: 236px 237px 235px 150px;
+    gap: 89px;
   }
 }
 
 .additionally__item {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 0;
+  }
 }

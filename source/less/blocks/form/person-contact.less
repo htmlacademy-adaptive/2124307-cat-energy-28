@@ -1,10 +1,9 @@
 .person-contact {
   position: relative;
-  margin-top: 26px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet_width) {
-    margin-top: 75px;
+    margin-top: 74px;
     margin-bottom: 65px;
   }
 
@@ -18,28 +17,41 @@
   content: "";
   position: absolute;
   width: 100vw;
-  border: 2px solid @base_green;
-  top: 12px;
+  border: 1px solid @base_green;
+  top: 15px;
   z-index: -1;
+
+  @media (min-width: @tablet_width) {
+    top: 21px;
+  }
 }
 
 .person-contact__legend {
   .form_headlines ();
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   background-color: #ffffff;
-  width: 219px;
+  width: 201px;
   padding-left: 20px;
 
-  @media (min-width: @tablet_width) {
-    br {
-      display: none;
-    }
+  br {
+    content: " ";
+  }
 
-    width: 590px;
+  br::after {
+    content: " ";
+  }
+
+  @media (min-width: @tablet_width) {
+    width: 553px;
     margin-bottom: 76px;
-    padding-left: 39px;
+    padding-left: 38px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop_width) {
+    padding-left: 40px;
+    margin-left: 70px;
   }
 }
 
