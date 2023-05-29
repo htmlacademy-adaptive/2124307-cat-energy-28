@@ -75,7 +75,7 @@
                   <div class="goal__wrapper">
                     <ul class="goal__list">
                       <li class="goal__item">
-                        <label class="goal__label control">
+                        <label class="goal__label control" focusable="true">
                           <input class="visually-hidden control__input" type="radio" name="programs-group" value="weight-loss" checked>
                           <span class="control__mark">
                             Похудение
@@ -83,7 +83,7 @@
                         </label>
                       </li>
                       <li class="goal__item">
-                        <label class="goal__label control">
+                        <label class="goal__label control" focusable="true">
                           <input class="visually-hidden control__input" type="radio" name="programs-group" value="weight-gain">
                           <span class="control__mark">
                             Набор массы
@@ -91,7 +91,7 @@
                         </label>
                       </li>
                       <li class="goal__item">
-                        <label class="goal__label control">
+                        <label class="goal__label control" focusable="true">
                           <input class="visually-hidden control__input" type="radio" name="programs-group" value="advice">
                           <span class="control__mark">
                             Не знаю (Нужен ваш совет)
@@ -208,6 +208,13 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+        <div class="contacts__map-static-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 769px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img class="contacts__map-static" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="362" alt="Карта">
+          </picture>
+        </div>
       </section>
     </main>
 

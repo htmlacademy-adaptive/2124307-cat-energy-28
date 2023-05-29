@@ -9,7 +9,7 @@
 
   @media (min-width: @desktop_width) {
     display: grid;
-    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-columns: 1fr 1220px 1fr;
     grid-template-rows: 95px max-content 107px;
   }
 }
@@ -158,6 +158,18 @@
 }
 
 .contacts__map-static {
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  display: block;
+  width: 320px;
+  height: 362px;
+
+  @media (min-width: @tablet_width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 1440px;
+    height: 400px;
+  }
 }
